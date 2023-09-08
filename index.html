@@ -7,28 +7,27 @@
     <link rel="stylesheet" href="style.css">
     <title>Profile</title>
 </head>
-<body>
-    <!-- <div class="flex justify-between">
-        <img src="/favicon.ico" data-testid="githubURL">
-        <img src="/favicon.ico">
-        <img src="/favicon.ico">
-    </div> -->
-    <div class="flex justify-center my-auto">
-        <div class="flex flex-col items-center">
+<body class="bg-whitesmoke">
+    <div class="">
+        <div class="flex flex-col items-center bg-white w-[50%] mx-auto">
             <div class="rounded-full border border-[2px]">
-                <img src="display_picture.jpeg" class="w-[250px] h-[250px] rounded-full" alt="Niffyboy" data-testid="slackUserName">
+                <img src="display_picture.jpeg" class="sm:w-[200px] sm:h-[200px] rounded-full" alt="Niffyboy" data-testid="slackUserName">
             </div>
             <div>
                 <!-- slack name -->
-                <p data-testid="slackUserName" class="font-bold text-[30px] font-family text-center">Temenu Oluwanifemi</p>
-                <p class="text-center" data-testid="currentDayOfTheWeek">Day:</p>
-                <p class="text-center" data-testid="currentUTCTime">Current Time:</p>
+                <p data-testid="slackUserName" class="font-bold text-[30px] font-family text-center pb-[15px] pt-[10px]">Temenu Oluwanifemi</p>
+
+                <p class="text-center font-family2 font-medium pb-[10px]" data-testid="currentDayOfTheWeek">Day:</p>
+
+                <p class="text-center font-family2 font-medium pb-[10px]" data-testid="currentUTCTime">Current Time:</p>
+
                 <!-- Track  -->
-               <p data-testid="myTrack" class="text-center">Track: Frontend</p>
+               <p data-testid="myTrack" class="text-center font-family2 font-medium pb-[10px]">Track: Frontend</p>
+               
                 <!-- githublink -->
-                <div class="flex items-center justify-center">
-                    <img src="/favicon.ico" data-testid="githubURL" class="pr-2 cursor:pointer">
-                    <a href="" class="underline text-blue">GithubURL</a>
+                <div class="flex items-center justify-center border-2 w-[50%] mx-auto border-[teal] py-[10px] cursor-pointer">
+                    <img src="/favicon.ico" data-testid="githubURL" class="pr-2 md:block sm:hidden hidden">
+                    <a href="" class="underline text-blue font-family2 font-medium decoration-none">Github-link</a>
                 </div>
             </div>
         </div>
