@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+<body>
+    <!-- <div class="flex justify-between">
+        <img src="/favicon.ico" data-testid="githubURL">
+        <img src="/favicon.ico">
+        <img src="/favicon.ico">
+    </div> -->
+    <div class="flex justify-center my-auto">
+        <div class="flex flex-col items-center">
+            <div class="rounded-full border border-[2px]">
+                <img src="display_picture.jpeg" class="w-[250px] h-[250px] rounded-full" alt="Niffyboy" data-testid="slackUserName">
+            </div>
+            <div>
+                <!-- slack name -->
+                <p data-testid="slackUserName" class="font-bold text-[30px] font-family text-center">Temenu Oluwanifemi</p>
+                <p class="text-center" data-testid="currentDayOfTheWeek">Day:</p>
+                <p class="text-center" data-testid="currentUTCTime">Current Time:</p>
+                <!-- Track  -->
+               <p data-testid="myTrack" class="text-center">Track: Frontend</p>
+                <!-- githublink -->
+                <div class="flex items-center justify-center">
+                    <img src="/favicon.ico" data-testid="githubURL" class="pr-2 cursor:pointer">
+                    <a href="" class="underline text-blue">GithubURL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
