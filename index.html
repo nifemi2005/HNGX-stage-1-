@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Profile</title>
 </head>
-<body class="bg-whitesmoke">
+<body class="bg-black">
     <div class="">
         <div class="flex flex-col items-center bg-white w-[50%] mx-auto">
             <div class="rounded-full border border-[2px]">
@@ -17,20 +17,48 @@
                 <!-- slack name -->
                 <p data-testid="slackUserName" class="font-bold text-[30px] font-family text-center pb-[15px] pt-[10px]">Temenu Oluwanifemi</p>
 
-                <p class="text-center font-family2 font-medium pb-[10px]" data-testid="currentDayOfTheWeek">Day:</p>
+                <div class="pb-[10px] flex mx-auto justify-center font-family2 text-center">
+                    <p class="font-medium pr-1" data-testid="currentDayOfTheWeek">Day:</p>
+                    <span id="day"></span>
+                </div>
 
-                <p class="text-center font-family2 font-medium pb-[10px]" data-testid="currentUTCTime">Current Time:</p>
+                <div class="pb-[10px] flex mx-auto justify-center font-family2 text-center">
+                    <p class="text-center font-family2 font-medium pr-1" data-testid="currentUTCTime">Current Time:</p>
+                    <span id="dateTime"></span>
+                </div>
 
                 <!-- Track  -->
                <p data-testid="myTrack" class="text-center font-family2 font-medium pb-[10px]">Track: Frontend</p>
-               
+
                 <!-- githublink -->
-                <div class="flex items-center justify-center border-2 w-[50%] mx-auto border-[teal] py-[10px] cursor-pointer">
+                <div class="flex items-center justify-center border-2 w-[50%] mx-auto border-[teal] py-[10px] mb-[50px] cursor-pointer">
                     <img src="/favicon.ico" data-testid="githubURL" class="pr-2 md:block sm:hidden hidden">
                     <a href="" class="underline text-blue font-family2 font-medium decoration-none">Github-link</a>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
+    <script>
+        function displayCurrentDateTime() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const day = daysOfWeek[now.getDay()];
+
+
+            const dateTimeString = `${time}`;
+            const currentDay = `${day}`
+            document.getElementById('dateTime').textContent = dateTimeString;
+            document.getElementById('day').textContent = currentDay;
+        }
+
+        // Call the function initially to display the current date and time
+        displayCurrentDateTime();
+
+        // Update the time every second (1000 milliseconds)
+        setInterval(displayCurrentDateTime, 1000);
+
+    </script>
 </body>
 </html>
